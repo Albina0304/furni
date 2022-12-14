@@ -1,5 +1,5 @@
-
-body {
-font-size: 20px;
-color: red;
-}
+@import '_global';
+@import '_header';
+@import '_hero';
+@import '_btn';
+@import '_footer';
