@@ -30,23 +30,30 @@ p {
   line-height: 24px;
   color: #6A6A6A; }
 
-h2 {
+h1 {
   font-weight: 600;
   font-size: 49px;
   line-height: 65px;
   margin: 0;
   color: #FFFFFF; }
 
-h3 {
+h2 {
   font-weight: 600;
   font-size: 34px;
   line-height: 41px;
   margin: 0;
   color: #2F2F2F; }
 
+h3 {
+  font-weight: 7s00;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  color: #2F2F2F; }
+
 h4 {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   margin: 0;
   color: #2F2F2F; }
@@ -57,6 +64,9 @@ h5 {
   line-height: 22px;
   margin: 0;
   color: #000000; }
+
+.card-click {
+  display: none; }
 
 .header {
   background-color: #385D50; }
@@ -103,21 +113,98 @@ h5 {
   .hero-main {
     display: flex; }
   .hero-left {
-    width: 33.3%; }
+    width: 40%; }
   .hero-title {
     padding-bottom: 117px; }
   .hero-right {
     display: flex;
     flex-direction: row-reverse;
-    margin: -320px -85px;
-    padding-bottom: 60px; }
+    margin: -40px -90px 0px 0px; }
   .hero-background {
     position: absolute;
     z-index: 1; }
-  .hero-sofa {
+  .hero .hero-sofa {
     position: relative;
     z-index: 2;
-    margin: -80px -10px; }
+    margin: -72px -6px 0px 0; }
+
+.card {
+  background-color: #EFF2F1;
+  padding: 164px 0 222px; }
+  .card-material {
+    display: flex;
+    align-items: center; }
+  .card-text {
+    width: 25%;
+    padding-right: 50px; }
+  .card-product {
+    width: 25%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1; }
+    .card-product:hover:after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      background: rgba(53, 115, 110, 0.1);
+      border-radius: 20px;
+      height: 75%;
+      bottom: 0;
+      width: 100%; }
+  .card-title {
+    margin-bottom: 27px; }
+  .card-discription {
+    margin-bottom: 33px; }
+  .card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 235px; }
+  .card-product:hover {
+    margin-top: -50px; }
+  .card-product:hover .card-click {
+    display: block; }
+  .card-product:hover .card-price {
+    margin-bottom: 20px; }
+  .card-image-title {
+    margin: 44px 0 1px; }
+
+.info {
+  background: #EFF2F1;
+  padding-bottom: 227px; }
+  .info-general {
+    display: flex; }
+  .info-colon {
+    display: flex; }
+  .info-left, .info-right {
+    width: 50%; }
+  .info-right {
+    padding-left: 100px; }
+  .info-text {
+    padding-right: 100px;
+    margin-bottom: 88px; }
+  .info-title {
+    margin-bottom: 27px; }
+  .info-colon-left, .info-colon-right {
+    max-width: 247px; }
+  .info-colon-left {
+    margin-right: 11px; }
+  .info-colon-img {
+    margin-bottom: 12px;
+    border-radius: 20px;
+    width: 31px;
+    background: rgba(53, 115, 110, 0.2); }
+  .info-colon-title {
+    margin-bottom: 9px; }
+  .info-colon-text {
+    margin-bottom: 30px; }
+  .info-background {
+    position: absolute;
+    margin: -52px 0px 0px -77px; }
+  .info-decor {
+    position: relative; }
 
 .section-button-wrapper {
   display: flex; }
@@ -157,5 +244,12 @@ h5 {
   .btn-secondary:hover {
     background-color: transparent;
     color: #FFFFFF; }
+  .btn-sm {
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFF;
+    background: #2F2F2F;
+    border-radius: 30px;
+    padding: 11px 32px; }
 
 /*# sourceMappingURL=main.css.map */

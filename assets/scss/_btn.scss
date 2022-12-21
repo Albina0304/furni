@@ -39,4 +39,12 @@
             background-color: transparent;
             color: #FFFFFF;
         }
+        &-sm {
+        font-size: 16px;
+		line-height: 28px;
+		color: #FFFF;
+		background: #2F2F2F;
+		border-radius: 30px;
+		padding: 11px 32px;
+        }
 }

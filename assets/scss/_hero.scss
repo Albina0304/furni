@@ -4,7 +4,7 @@
             display: flex;
         }
         &-left {
-            width: 33.3%;
+            width: 40%;
         }
         &-title {
             padding-bottom: 117px;
@@ -12,16 +12,15 @@
         &-right {
             display: flex;
             flex-direction: row-reverse;
-            margin: -320px -85px;
-            padding-bottom: 60px;
+            margin: -40px -90px 0px 0px;
         }
         &-background {
             position: absolute;
             z-index: 1;
         }
-        &-sofa {
+        & &-sofa {
             position: relative;
             z-index: 2;
-            margin: -80px -10px;
+            margin: -72px -6px 0px 0;
         }
 }

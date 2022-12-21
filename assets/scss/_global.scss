@@ -30,24 +30,31 @@ p {
     line-height: 24px;
     color: #6A6A6A;
 }
-h2 {
+h1 {
     font-weight: 600;
 	font-size: 49px;
 	line-height: 65px;
 	margin: 0;
     color: #FFFFFF;
 }
-h3 {
+h2 {
     font-weight: 600;
 	font-size: 34px;
 	line-height: 41px;
 	margin: 0;
     color: #2F2F2F;
 }
-h4 {
-    font-weight: 600;
+h3 {
+    font-weight: 7s00;
 	font-size: 18px;
 	line-height: 22px;
+	margin: 0;
+    color: #2F2F2F;
+}
+h4 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
 	margin: 0;
     color: #2F2F2F;
 }
@@ -57,4 +64,7 @@ h5 {
 	line-height: 22px;
 	margin: 0;
     color: #000000;
+}
+.card-click {
+    display: none;
 }
