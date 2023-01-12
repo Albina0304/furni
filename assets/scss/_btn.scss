@@ -18,33 +18,33 @@
 	border: 2px solid rgba(255, 255, 255, 0.29);
     border-radius: 30px;
     padding: 11px 37px;
-	background: transparent;
+	background-color: transparent;
 	display: inline-block;
 	font-size: 16px;
 	line-height: 28px;
 	font-weight: 500;
-	color: #FFFFFF;
+	color: $white;
 	text-align: center;
-	transition: background 0.5s steps(4, jump-end),color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1);
+	transition: background-color 0.5s steps(4, jump-end),color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1);
         &:hover {
-            background: #F9BF29;
+            background-color: $primary-color;
             color: #2F2F2F;
         }
         &-secondary {
-            background: #F9BF29;
+            background-color: $primary-color;
             color: #2F2F2F;
             padding: 11px 26px;
-        }
-        &-secondary:hover {
-            background-color: transparent;
-            color: #FFFFFF;
-        }
+			&:hover {
+				background-color: transparent;
+				color: $white;
+        	}
+		}
         &-sm {
-        font-size: 16px;
-		line-height: 28px;
-		color: #FFFF;
-		background: #2F2F2F;
-		border-radius: 30px;
-		padding: 11px 32px;
+			font-size: 16px;
+			line-height: 28px;
+			color: $white;
+			background-color: #2F2F2F;
+			border-radius: 30px;
+			padding: 11px 32px;
         }
 }

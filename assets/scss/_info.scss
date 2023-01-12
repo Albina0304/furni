@@ -1,38 +1,49 @@
 .info {
-    background: #EFF2F1;
+    background-color: $background;
     padding-bottom: 227px;
         &-general {
             display: flex;
         }
         &-colon {
             display: flex;
+            flex-wrap: wrap;
+            margin: 0 -28px;
+            max-width: 100%;
         }
         &-left,
         &-right {
             width: 50%;
         }
+        &-box {
+            flex: 1 1 50%;
+            padding: 0 28px;
+        }
+        &-title {
+            margin-bottom: 27px;
+        }
         &-right {
             padding-left: 100px;
+            position: relative;
         }
         &-text {
             padding-right: 100px;
             margin-bottom: 88px;
         }
-        &-title {
-            margin-bottom: 27px;
-        }
-        &-colon-left,
-        &-colon-right {
-            max-width: 247px;
-        }
-        &-colon-left {
-            margin-right: 11px;
-        }
         &-colon-img{ 
             margin-bottom: 12px;
-            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        &-colon-img:after {
+            content: '';
+            border-radius: 50%;
             width: 31px;
-            background: rgba(53, 115, 110, 0.2);
+            height: 31px;
+            display: block;
+            background-color: rgba(53, 115, 110, 0.2);
+            position: absolute;
+            top: 0;
+            left: 15px;
         }
         &-colon-title {
             margin-bottom: 9px;
@@ -42,7 +53,8 @@
         }
         &-background {
             position: absolute;
-            margin: -52px 0px 0px -77px;
+            top: -52px;
+            left: 23px;
         }
         &-decor {
             position: relative;

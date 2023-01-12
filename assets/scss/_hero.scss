@@ -13,6 +13,8 @@
             display: flex;
             flex-direction: row-reverse;
             margin: -40px -90px 0px 0px;
+            position: relative;
+            z-index: 1;
         }
         &-background {
             position: absolute;
@@ -21,6 +23,7 @@
         & &-sofa {
             position: relative;
             z-index: 2;
-            margin: -72px -6px 0px 0;
+            top: -72px;
+            right: -6px;
         }
 }

@@ -1,0 +1,62 @@
+.option {
+    background-color: $background;
+    padding-bottom: 219px;
+    &-general {
+        display: flex;
+    }
+    &-right {
+        width: 40%;
+    }
+    &-left {
+        position: relative;
+        z-index: 2;
+        width: 60%;
+    }
+    &-background {
+        position: absolute;
+        z-index: 1;
+        top: -55px;
+        left: -110px;
+    }
+    &-decor {
+        &-primary {
+            position: relative;
+            z-index: 1;
+        }
+        &-secondary,
+        &-last {
+            position: absolute;
+            z-index: 1;
+        }
+        &-last {
+            bottom: -40px;
+            right: 40px;
+        }
+        &-secondary {
+            top: 0;
+            right: 40px;
+        }
+    }
+    &-text p {
+        margin: 28px 0 31px;
+    }
+    &-colons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-col {
+        flex: 1 1 50%;
+        display: flex;
+        align-items: baseline;
+        &-img {
+            display: flex;
+            padding-right: 13px;
+        }
+        &-text p {
+            margin: 0 41px 24px 0;
+        }
+    }
+    & .menu-btn {
+        margin-top: 14px;
+    }
+}

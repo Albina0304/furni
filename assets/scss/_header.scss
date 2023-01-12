@@ -1,54 +1,67 @@
 .header {
-    background-color: #385D50;
-        &-navigation a {
-            color: #FFFFFF;
+    background-color: $secondary-color;
+    &-navigation {
+        @include reset-list;
+        display: flex;
+        li {
+            &:hover,
+            &.active {
+                a {
+                    border-bottom: 5px solid $primary-color;
+                    opacity: 1;
+                    padding-bottom: 7px;
+                }
+            }
+        }
+        & a {
+            color: $white;
             opacity: 0.5;
             display: flex;
         }
-        &-navbar {
-            display: flex;
-            align-items: center;
-        }
-        &-nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 50px 0 132px;
-        }
-        &-navigation {
-            display: flex;
-        }
-        &-navigation li {
+        & li {
             padding: 0 22px;
         }
-        &-icons {
-            display: flex;
-            padding-left: 68px;
-            margin: 0 -10px;
+    }
+    &-navbar {
+        display: flex;
+        align-items: center;
+    }
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 132px;
+    }
+    &-icons {
+        display: flex;
+        padding-left: 68px;
+        margin: 0 -10px;
+    }
+    &-icon {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        & svg {
+            fill: $white;
         }
-        &-icon {
-            flex-direction: column;
-            align-items: center;
-            padding: 0 10px;
+    }
+    &-logo {
+        &:hover {
+            & svg path:not(.path-logo) {
+                fill: $primary-color; 
+            }
         }
-        &-icon svg {
-            fill: #FFFFFF;
+            & svg path:not(.path-logo) {
+                transition: all 0.5s;
+            } 
+    }
+    &-icon {
+        &:hover {
+            & svg path:not(.path-logo) {
+                fill: $primary-color;
+            }
         }
-        &-logo:hover svg path:not(.path-logo) {
-            fill: #F9BF29;
-        }
-        &-logo svg path:not(.path-logo) {
+        & svg path:not(.path-logo) {
             transition: all 0.5s;
         }
-        &-icon:hover svg path:not(.path-logo) {
-            fill: #F9BF29;
-        }
-        &-icon svg path:not(.path-logo) {
-            transition: all 0.5s;
-        }
-        &-navigation li.active a,
-        &-navigation li:hover a {
-            border-bottom: 5px solid #F9BF29;
-            opacity: 1;
-            padding-bottom: 7px;
-        }
+    }
 }

@@ -1,5 +1,5 @@
 .card {
-    background-color: #EFF2F1;
+    background-color: $background;
     padding: 164px 0 222px;
         &-material {
             display: flex;
@@ -16,19 +16,14 @@
             flex-direction: column;
             position: relative;
             z-index: 1;
-            // &:hover {
-            //     .product-click {
-
-            //     }
-            // }
             &:hover:after {
                 content: "";
                 z-index: -1;
                 position: absolute;
-                background: rgba(53, 115, 110, 0.1);
+                background-color: rgba(53, 115, 110, 0.1);
                 border-radius: 20px;
-                height: 75%;
-                bottom: 0;
+                height: 70%;
+                bottom: 17px;
                 width: 100%;
             }
         }
@@ -55,7 +50,5 @@
         }
         &-image-title {
             margin: 44px 0 1px;
-        }
-     
-        
+        }    
 }
