@@ -1,0 +1,43 @@
+.product {
+    background-color: $background;
+    padding-bottom: 95px;
+    &-cards {
+        display: flex;
+        margin: 0 -24px;
+    }
+    &-card {
+        width: 33.3%;
+        padding: 0 24px;
+        display: flex;
+    }
+    &-img {
+        margin-right: 18px;
+        position: relative;
+        z-index: 1;
+        &:after {
+                content: '';
+                border-radius: 10px;
+                width: 80px;
+                height: 80px;
+                display: block;
+                background-color: rgba(53, 115, 110, 0.3);
+                position: absolute;
+                top: 0;
+                right: -5px;
+        }
+    }
+    &-text {
+        margin: 11px 0;
+    }
+    &-link {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 22px;
+        margin: 0; 
+        color: #6A6A6A;
+        &:hover {
+            color: $primary-color;
+            transition: background-color 0.5s steps(4, jump-end),color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1);
+        }
+    }
+}

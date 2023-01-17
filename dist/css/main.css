@@ -26,7 +26,8 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: #6A6A6A; }
+  color: #6A6A6A;
+  margin: 0; }
 
 h1 {
   font-weight: 600;
@@ -43,7 +44,7 @@ h2 {
   color: #2F2F2F; }
 
 h3 {
-  font-weight: 7s00;
+  font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   margin: 0;
@@ -268,6 +269,162 @@ h5 {
   .option .menu-btn {
     margin-top: 14px; }
 
+.product {
+  background-color: #EFF2F1;
+  padding-bottom: 95px; }
+  .product-cards {
+    display: flex;
+    margin: 0 -24px; }
+  .product-card {
+    width: 33.3%;
+    padding: 0 24px;
+    display: flex; }
+  .product-img {
+    margin-right: 18px;
+    position: relative;
+    z-index: 1; }
+    .product-img:after {
+      content: '';
+      border-radius: 10px;
+      width: 80px;
+      height: 80px;
+      display: block;
+      background-color: rgba(53, 115, 110, 0.3);
+      position: absolute;
+      top: 0;
+      right: -5px; }
+  .product-text {
+    margin: 11px 0; }
+  .product-link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 22px;
+    margin: 0;
+    color: #6A6A6A; }
+    .product-link:hover {
+      color: #F9BF29;
+      transition: background-color 0.5s steps(4, jump-end), color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1); }
+
+.slider {
+  background-color: #EFF2F1;
+  padding-bottom: 41px;
+  position: relative;
+  z-index: 2; }
+  .slider-title {
+    text-align: center; }
+  .slider-title {
+    margin-bottom: 47px; }
+  .slider-text p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 42px;
+    padding: 0 180px; }
+  .slider-img, .slider-person-title {
+    margin-bottom: 4px; }
+
+.slids {
+  text-align: center; }
+  .slids-img {
+    width: 98px; }
+
+.slick-slide .slids-img {
+  width: 98px; }
+
+.slick-slide img {
+  display: inline-block;
+  border-radius: 50%; }
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px; }
+  .slick-dots button {
+    background: #D9D9D9;
+    order: 1;
+    width: 12px;
+    height: 12px;
+    font-size: 0;
+    border: none;
+    border-radius: 100px;
+    margin-right: 13px;
+    cursor: pointer; }
+  .slick-dots .slick-active button {
+    background-color: #385D50; }
+
+.slick-prev.slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 0px;
+  font-size: 0;
+  border: 0px;
+  background-color: #E9E9E9;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  transition: all 1s;
+  cursor: pointer; }
+  .slick-prev.slick-arrow:hover {
+    background-color: #385D50;
+    height: 58px;
+    width: 58px;
+    border-radius: 50%; }
+    .slick-prev.slick-arrow:hover svg:hover path {
+      fill: #FFFF; }
+    .slick-prev.slick-arrow:hover svg path:not(.path-logo) {
+      transition: all 0.5s; }
+
+.slick-next.slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 0px;
+  font-size: 0;
+  border: 0px;
+  background-color: #E9E9E9;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  transition: all 1s;
+  cursor: pointer; }
+  .slick-next.slick-arrow:hover {
+    background-color: #385D50;
+    height: 58px;
+    width: 58px;
+    border-radius: 50%; }
+  .slick-next.slick-arrow svg:hover path {
+    fill: #FFFF; }
+  .slick-next.slick-arrow svg path:not(.path-logo) {
+    transition: all 0.5s; }
+
+.blog {
+  background-color: #EFF2F1;
+  padding: 41px 0 159px; }
+  .blog-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px; }
+  .blog-link a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 41px;
+    color: #2F2F2F;
+    border-bottom: 3px solid #000000; }
+    .blog-link a:hover {
+      color: #F9BF29;
+      border-bottom: 3px solid #F9BF29; }
+  .blog-cards {
+    display: flex;
+    justify-content: space-between; }
+  .blog-img {
+    margin-bottom: 44px; }
+  .blog-card-title {
+    margin-bottom: 5px; }
+  .blog-card-text p {
+    line-height: 17px; }
+
 .section-button-wrapper {
   display: flex; }
 
@@ -313,5 +470,8 @@ h5 {
     background-color: #2F2F2F;
     border-radius: 30px;
     padding: 11px 32px; }
+
+.footer {
+  margin: 98px 0 93px; }
 
 /*# sourceMappingURL=main.css.map */
