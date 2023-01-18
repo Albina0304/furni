@@ -1,23 +1,81 @@
 .footer {
+    background-color: $white;
+    &-icons {
+        display: flex;
+        padding: 0;
+        border-bottom: 1px solid $border-bottom;
+    }
+    &-icon {
+        background-color: $button;
+        border-radius: 50%;
+        height: 41px;
+        width: 41px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 11px 32px 0;
+        &:hover {
+            background-color: $secondary-color;
+            & svg path {
+                fill: $white;
+            }
+        }
+    }
     &-logo {
+        margin-bottom: 19px;
+        & svg path {
+            transition: all 0.5s;
+        }
         &:hover {
             & svg path:not(.path-logo) {
                 fill: $primary-color; 
             }
         }
-            & svg path:not(.path-logo) {
-                transition: all 0.5s;
-            } 
     }
-    &-center {
+    &-top {
         display: flex;
-        align-items: center;
+        align-items: start;
         &-navigation {
             display: flex;
-            width: 60%;
+            flex: 1 1 68%;
+            justify-content: space-around;
+            padding: 0px 65px;
         }
         &-company {
-            width: 40%;
+            flex: 1 1 32%;
+        }
+        &-nav {
+            @include reset-list;
+            a {
+                color: $body;
+                line-height: 28px;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    &-bottom {
+        padding: 36px 0 93px;
+        display: flex;
+        justify-content: space-between;
+        &-copy {
+            span {
+                font-size: 13px;
+            }
+        }
+        a {
+            color: $body;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        &-help {
+            display: flex;
+            margin: 0 -21px;
+            &-link {
+                padding: 0 21px;
+            }
         }
     }
 }
