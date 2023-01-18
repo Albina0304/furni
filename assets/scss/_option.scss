@@ -3,38 +3,44 @@
     padding-bottom: 219px;
     &-general {
         display: flex;
+        margin: 0 -22px;
     }
     &-right {
-        width: 40%;
+        flex: 1 1 40%;
+        padding: 0 22px;
     }
     &-left {
         position: relative;
         z-index: 2;
-        width: 60%;
+        flex: 1 1 60%;
+        min-height: 514px;
+        padding: 0 22px;
     }
     &-background {
         position: absolute;
-        z-index: 1;
+        z-index: -1;
         top: -55px;
         left: -110px;
     }
+    &-wrapper {
+        position: relative;
+        display: flex;
+        max-width: 634px;
+    }
     &-decor {
         &-primary {
-            position: relative;
-            z-index: 1;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            overflow: hidden;
         }
-        &-secondary,
         &-last {
             position: absolute;
             z-index: 1;
-        }
-        &-last {
-            bottom: -40px;
-            right: 40px;
+            bottom: -50px;
+            right: 0;
         }
         &-secondary {
-            top: 0;
-            right: 40px;
+            padding-left: 33px;
         }
     }
     &-text p {
