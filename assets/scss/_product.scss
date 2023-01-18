@@ -34,7 +34,7 @@
         font-size: 12px;
         line-height: 22px;
         margin: 0; 
-        color: #6A6A6A;
+        color: $body;
         &:hover {
             color: $primary-color;
             transition: background-color 0.5s steps(4, jump-end),color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1);

@@ -36,7 +36,7 @@
                 justify-content: center;
                 margin-top: 40px;
                 & button {
-                    background: #D9D9D9;
+                    background-color: $button;
                     order: 1;
                     width: 12px;
                     height: 12px;
@@ -47,7 +47,7 @@
                     cursor: pointer;
                 }
                 & .slick-active button {
-                    background-color: #385D50;
+                    background-color: $secondary-color;
                 }
             }
             &-prev,
@@ -58,7 +58,7 @@
                 font-size: 0;
                 border: 0px;
                 cursor: pointer;
-                background-color: #E9E9E9;
+                background-color: $background-hover;
                 border-radius: 50%;
                 width: 58px;
                 height: 58px;
