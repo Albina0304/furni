@@ -1,6 +1,6 @@
 .blog {
     background-color: $background;
-    padding: 41px 0 159px;
+    margin: 41px 0 159px;
     &-description {
         display: flex;
         align-items: center;
@@ -31,5 +31,4 @@
     &-card-text p {
         line-height: 17px;
     }
-
 }

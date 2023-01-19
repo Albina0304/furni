@@ -67,7 +67,7 @@ h5 {
   color: #000000; }
 
 .section {
-  margin: 200px 0; }
+  margin: 194px 0; }
 
 .header {
   background-color: #385D50; }
@@ -103,13 +103,13 @@ h5 {
     padding: 0 10px; }
     .header-icon svg {
       fill: #FFFF; }
+    .header-icon:hover svg path:not(.path-logo) {
+      fill: #F9BF29; }
+    .header-icon svg path:not(.path-logo) {
+      transition: all 0.5s; }
   .header-logo:hover svg path:not(.path-logo) {
     fill: #F9BF29; }
   .header-logo svg path:not(.path-logo) {
-    transition: all 0.5s; }
-  .header-icon:hover svg path:not(.path-logo) {
-    fill: #F9BF29; }
-  .header-icon svg path:not(.path-logo) {
     transition: all 0.5s; }
 
 .hero {
@@ -134,6 +134,16 @@ h5 {
     z-index: 2;
     top: -72px;
     right: -6px; }
+  .hero .section-button-wrapper {
+    display: flex;
+    max-width: 300px;
+    margin: 0 -7px;
+    flex-wrap: wrap; }
+    .hero .section-button-wrapper .btn {
+      width: 100%; }
+    .hero .section-button-wrapper > * {
+      padding: 0 7px;
+      width: 50%; }
 
 .card {
   background-color: #EFF2F1;
@@ -171,14 +181,14 @@ h5 {
     align-items: center;
     justify-content: center;
     height: 235px; }
+    .card-image-title {
+      margin: 44px 0 1px; }
   .card-product:hover {
     margin-top: -50px; }
-  .card-product:hover .card-click {
-    display: block; }
-  .card-product:hover .card-price {
-    margin-bottom: 20px; }
-  .card-image-title {
-    margin: 44px 0 1px; }
+    .card-product:hover-click {
+      display: block; }
+    .card-product:hover-price {
+      margin-bottom: 20px; }
 
 .info-general {
   display: flex; }
@@ -204,16 +214,16 @@ h5 {
   margin-bottom: 12px;
   position: relative;
   z-index: 1; }
-.info-colon-img:after {
-  content: '';
-  border-radius: 50%;
-  width: 31px;
-  height: 31px;
-  display: block;
-  background-color: rgba(53, 115, 110, 0.2);
-  position: absolute;
-  top: 0;
-  left: 15px; }
+  .info-colon-img:after {
+    content: '';
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    display: block;
+    background-color: rgba(53, 115, 110, 0.2);
+    position: absolute;
+    top: 0;
+    left: 15px; }
 .info-colon-title {
   margin-bottom: 9px; }
 .info-colon-text {
@@ -223,11 +233,13 @@ h5 {
   top: -52px;
   left: 23px; }
 .info-decor {
-  position: relative; }
+  position: relative;
+  z-index: 1; }
 
 .option-general {
   display: flex;
-  margin: 0 -22px; }
+  margin: 0 -22px;
+  align-items: end; }
 .option-right {
   flex: 1 1 40%;
   padding: 0 22px; }
@@ -276,7 +288,7 @@ h5 {
 
 .product {
   background-color: #EFF2F1;
-  padding-bottom: 95px; }
+  margin-bottom: 95px; }
   .product-cards {
     display: flex;
     margin: 0 -24px; }
@@ -294,7 +306,7 @@ h5 {
       width: 80px;
       height: 80px;
       display: block;
-      background-color: rgba(53, 115, 110, 0.3);
+      background-color: rgba(56, 93, 80, 0.3);
       position: absolute;
       top: 0;
       right: -5px; }
@@ -305,14 +317,14 @@ h5 {
     font-size: 12px;
     line-height: 22px;
     margin: 0;
-    color: #6A6A6A; }
+    color: #6A6A6A;
+    transition: background-color 0.5s steps(4, jump-end), color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1); }
     .product-link:hover {
-      color: #F9BF29;
-      transition: background-color 0.5s steps(4, jump-end), color 0.5s cubic-bezier(0.1, 0.7, 1, 0.1); }
+      color: #F9BF29; }
 
 .testimonials-slider {
   background-color: #EFF2F1;
-  padding-bottom: 41px;
+  margin-bottom: 41px;
   position: relative;
   z-index: 2; }
   .testimonials-slider-title {
@@ -375,7 +387,7 @@ h5 {
 
 .blog {
   background-color: #EFF2F1;
-  padding: 41px 0 159px; }
+  margin: 41px 0 159px; }
   .blog-description {
     display: flex;
     align-items: center;
@@ -439,22 +451,6 @@ h5 {
       background-color: #E9E9E9; }
       .form-control:hover svg path {
         fill: #385D50; }
-
-.section-button-wrapper {
-  display: flex; }
-
-.section-button-wrapper {
-  display: flex;
-  max-width: 300px;
-  margin: 0 -7px;
-  flex-wrap: wrap; }
-
-.section-button-wrapper > * {
-  padding: 0 7px;
-  width: 50%; }
-
-.section-button-wrapper .btn {
-  width: 100%; }
 
 .btn {
   border: 2px solid rgba(255, 255, 255, 0.29);

@@ -43,6 +43,14 @@
         & svg {
             fill: $white;
         }
+        &:hover {
+            & svg path:not(.path-logo) {
+                fill: $primary-color;
+            }
+        }
+        & svg path:not(.path-logo) {
+            transition: all 0.5s;
+        }
     }
     &-logo {
         &:hover {
@@ -53,15 +61,5 @@
             & svg path:not(.path-logo) {
                 transition: all 0.5s;
             } 
-    }
-    &-icon {
-        &:hover {
-            & svg path:not(.path-logo) {
-                fill: $primary-color;
-            }
-        }
-        & svg path:not(.path-logo) {
-            transition: all 0.5s;
-        }
     }
 }

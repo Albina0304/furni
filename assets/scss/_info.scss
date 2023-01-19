@@ -1,38 +1,37 @@
 .info {
-        &-general {
-            display: flex;
-        }
-        &-colon {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -28px;
-            max-width: 100%;
-        }
-        &-left,
-        &-right {
-            width: 50%;
-        }
-        &-box {
-            flex: 1 1 50%;
-            padding: 0 28px;
-        }
-        &-title {
-            margin-bottom: 27px;
-        }
-        &-right {
-            padding-left: 100px;
-            position: relative;
-        }
-        &-text {
-            padding-right: 100px;
-            margin-bottom: 88px;
-        }
-        &-colon-img{ 
-            margin-bottom: 12px;
-            position: relative;
-            z-index: 1;
-        }
-        &-colon-img:after {
+    &-general {
+        display: flex;
+    }
+    &-colon {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -28px;
+        max-width: 100%;
+    }
+    &-left,
+    &-right {
+        width: 50%;
+    }
+    &-box {
+        flex: 1 1 50%;
+        padding: 0 28px;
+    }
+    &-title {
+        margin-bottom: 27px;
+    }
+    &-right {
+        padding-left: 100px;
+        position: relative;
+    }
+    &-text {
+        padding-right: 100px;
+        margin-bottom: 88px;
+    }
+    &-colon-img{ 
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 1;
+        &:after {
             content: '';
             border-radius: 50%;
             width: 31px;
@@ -43,18 +42,20 @@
             top: 0;
             left: 15px;
         }
-        &-colon-title {
-            margin-bottom: 9px;
-        }
-        &-colon-text {
-            margin-bottom: 30px;
-        }
-        &-background {
-            position: absolute;
-            top: -52px;
-            left: 23px;
-        }
-        &-decor {
-            position: relative;
-        }
+    }
+    &-colon-title {
+        margin-bottom: 9px;
+    }
+    &-colon-text {
+        margin-bottom: 30px;
+    }
+    &-background {
+        position: absolute;
+        top: -52px;
+        left: 23px;
+    }
+    &-decor {
+        position: relative;
+        z-index: 1;
+    }
 }

@@ -26,4 +26,19 @@
             top: -72px;
             right: -6px;
         }
+        .section {
+            &-button-wrapper {
+                display: flex;
+                max-width: 300px;
+                margin: 0 -7px;
+                flex-wrap: wrap;
+                & .btn {
+                    width: 100%;
+                }
+                & > * {
+                    padding: 0 7px;
+                    width: 50%;
+                }
+            }
+        }
 }
