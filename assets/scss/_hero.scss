@@ -15,6 +15,12 @@
             margin: -40px -90px 0px 0px;
             position: relative;
             z-index: 1;
+            @include media-down('1300px') {
+                margin: -30px 0 0;
+            }
+            @include media-down('680px') {
+                // z-index: -1;
+            }
         }
         &-background {
             position: absolute;
