@@ -1,5 +1,6 @@
 .header {
     background-color: $secondary-color;
+
     &-navigation {
         @include reset-list;
         display: flex;

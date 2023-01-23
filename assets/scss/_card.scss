@@ -1,16 +1,47 @@
 .card {
     background-color: $background;
     margin-top: 164px;
+    @include media-down('1000px') {
+        margin-top: 90px;
+    }
+    @include media-down('860px') {
+        margin-top: 60px;
+    }
     &-click {
         display: none;
+    }
+    &-products {
+        display: flex;
+        justify-content: space-around;
+        width: 75%;
+        @include media-down('1000px') {
+            justify-content: space-around;
+            margin: 0 auto ;
+            width: 100%;
+        }
+        @include media-down('620px') {
+            display: block;
+            text-align: -webkit-center;
+        }
     }
     &-material {
         display: flex;
         align-items: center;
+        @include media-down('1000px') {
+            display: block;
+        }
     }
     &-text {
         width: 25%;
         padding-right: 50px;
+        @include media-down('1100px') {
+            width: 40%;
+            padding-right: 25px;
+        }
+        @include media-down('1000px') {
+            width: 100%;
+            text-align: center;
+        }
     }
     &-product {
         width: 25%;
@@ -19,6 +50,24 @@
         flex-direction: column;
         position: relative;
         z-index: 1;
+        @include media-down('620px') {
+            width: 50%;
+            padding: 60px 0 20px;
+        }
+        @include media-down('420px') {
+            width: 100%;
+        }
+        &:hover {
+            margin-top: -50px;
+            & .card-price {
+                padding-bottom: 20px;
+            }
+        }
+        &:hover .card-click {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+        }
         &:hover:after {
             content: "";
             z-index: -1;
@@ -32,9 +81,38 @@
     }
     &-title {
         margin-bottom: 27px;
+        @include media-down('1000px') {
+            margin-bottom: 15px;
+        }
+        h2 {
+            @include media-down('1000px') {
+                font-size: 50px;
+            }
+            @include media-down('860px') {
+                font-size: 40px;
+            }
+            @include media-down('690px') {
+                font-size: 33px;
+            }
+        }
     }
     &-discription {
         margin-bottom: 33px;
+        @include media-down('1000px') {
+            margin-bottom: 20px;
+        }
+        @include media-down('690px') {
+            margin-bottom: 14px;
+        }
+        p {
+            @include media-down('1000px') {
+                font-size: 16px;
+            }
+            @include media-down('690px') {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
     }
     &-image {
         display: flex;
@@ -45,13 +123,4 @@
             margin: 44px 0 1px;
         }   
     }
-    &-product:hover {
-        margin-top: -50px;
-        &-click {
-            display: block;
-        }
-        &-price {
-            margin-bottom: 20px;
-        }
-    } 
 }
