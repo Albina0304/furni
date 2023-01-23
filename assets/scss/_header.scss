@@ -53,6 +53,9 @@
         display: flex;
         justify-content: space-between;
         padding: 50px 0 132px;
+        @include media-down('980px') {
+            padding-bottom: 60px;
+        }
         @include media-down('680px') {
             justify-content: center;
             padding: 30px 0 90px;
