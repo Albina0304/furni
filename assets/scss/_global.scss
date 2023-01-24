@@ -68,4 +68,7 @@ h5 {
 }
 .section {
     margin: 194px 0;
+    @include media-down('1100px') {
+        margin: 150px 0;
+    }
 }

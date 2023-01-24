@@ -68,6 +68,9 @@ h5 {
 
 .section {
   margin: 194px 0; }
+  @media (max-width: 1100px) {
+    .section {
+      margin: 150px 0; } }
 
 .header {
   background-color: #385D50; }
@@ -353,7 +356,8 @@ h5 {
     @media (max-width: 1100px) {
       .card-text {
         width: 40%;
-        padding-right: 25px; } }
+        padding-right: 25px;
+        margin-bottom: 40px; } }
     @media (max-width: 1000px) {
       .card-text {
         width: 100%;
@@ -426,26 +430,89 @@ h5 {
     .card-image-title {
       margin: 44px 0 1px; }
 
+@media (max-width: 1100px) {
+  .info {
+    margin: 150px 0; } }
+@media (max-width: 860px) {
+  .info h5 {
+    text-align: start;
+    margin-bottom: 0; } }
 .info-general {
   display: flex; }
+  @media (max-width: 920px) {
+    .info-general {
+      align-items: center; } }
+  @media (max-width: 860px) {
+    .info-general {
+      display: block; } }
+  @media (max-width: 860px) {
+    .info-general {
+      flex-direction: row-reverse;
+      margin-bottom: 50px; } }
 .info-colon {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -28px;
   max-width: 100%; }
+  @media (max-width: 1100px) {
+    .info-colon {
+      margin: 0 -14px; } }
+  @media (max-width: 920px) {
+    .info-colon {
+      flex-direction: column; } }
+  @media (max-width: 860px) {
+    .info-colon {
+      flex-direction: row-reverse;
+      margin: 0; } }
+  @media (max-width: 520px) {
+    .info-colon {
+      flex-direction: column; } }
 .info-left, .info-right {
   width: 50%; }
 .info-box {
   flex: 1 1 50%;
   padding: 0 28px; }
+  @media (max-width: 1100px) {
+    .info-box {
+      padding: 0 14px; } }
 .info-title {
   margin-bottom: 27px; }
+  @media (max-width: 860px) {
+    .info-title {
+      text-align: center;
+      margin-bottom: 20px; } }
+@media (max-width: 1100px) {
+  .info-left {
+    width: 40%; } }
+@media (max-width: 860px) {
+  .info-left {
+    width: 100%;
+    margin-bottom: 50px; } }
 .info-right {
   padding-left: 100px;
   position: relative; }
+  @media (max-width: 1100px) {
+    .info-right {
+      width: 60%;
+      padding-left: 50px; } }
+  @media (max-width: 860px) {
+    .info-right {
+      width: 100%;
+      padding: 0;
+      justify-content: center;
+      display: flex; } }
 .info-text {
   padding-right: 100px;
   margin-bottom: 88px; }
+  @media (max-width: 1100px) {
+    .info-text {
+      padding-right: 40px;
+      margin-bottom: 30px; } }
+  @media (max-width: 860px) {
+    .info-text {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 0; } }
 .info-colon-img {
   margin-bottom: 12px;
   position: relative;
@@ -468,6 +535,13 @@ h5 {
   position: absolute;
   top: -52px;
   left: 23px; }
+  @media (max-width: 860px) {
+    .info-background {
+      top: -32px;
+      left: 40px; } }
+  @media (max-width: 680px) {
+    .info-background {
+      left: -10px; } }
 .info-decor {
   position: relative;
   z-index: 1; }

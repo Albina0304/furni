@@ -1,12 +1,44 @@
 .info {
+    @include media-down('1100px') {
+        margin: 150px 0;
+    }
+    h5 {
+        @include media-down('860px') {
+            text-align: start;
+            margin-bottom: 0;
+        }
+    }
     &-general {
         display: flex;
+        @include media-down('920px') {
+            align-items: center;
+        }
+        @include media-down('860px') {
+            display: block;
+        }
+        @include media-down('860px') {
+            flex-direction: row-reverse;
+            margin-bottom: 50px;
+        }
     }
     &-colon {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -28px;
         max-width: 100%;
+        @include media-down('1100px') {
+            margin: 0 -14px;
+        }
+        @include media-down('920px') {
+            flex-direction: column;
+        }
+        @include media-down('860px') {
+            flex-direction: row-reverse;
+            margin: 0;
+        }
+        @include media-down('520px') {
+            flex-direction: column;
+        }
     }
     &-left,
     &-right {
@@ -15,17 +47,52 @@
     &-box {
         flex: 1 1 50%;
         padding: 0 28px;
+        @include media-down('1100px') {
+            padding: 0 14px;
+        }
     }
     &-title {
         margin-bottom: 27px;
+        @include media-down('860px') {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    &-left {
+        @include media-down('1100px') {
+            width: 40%;
+        }
+        @include media-down('860px') {
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
     &-right {
         padding-left: 100px;
         position: relative;
+        @include media-down('1100px') {
+            width: 60%;
+            padding-left: 50px;
+        }
+        @include media-down('860px') {
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+            display: flex;
+        }
     }
     &-text {
         padding-right: 100px;
         margin-bottom: 88px;
+        @include media-down('1100px') {
+            padding-right: 40px;
+            margin-bottom: 30px;
+        }
+        @include media-down('860px') {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0;
+        }
     }
     &-colon-img{ 
         margin-bottom: 12px;
@@ -53,6 +120,13 @@
         position: absolute;
         top: -52px;
         left: 23px;
+        @include media-down('860px') {
+            top: -32px;
+            left: 40px;
+        }
+        @include media-down('680px') {
+            left: -10px;
+        }
     }
     &-decor {
         position: relative;

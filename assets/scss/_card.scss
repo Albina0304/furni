@@ -37,6 +37,7 @@
         @include media-down('1100px') {
             width: 40%;
             padding-right: 25px;
+            margin-bottom: 40px;
         }
         @include media-down('1000px') {
             width: 100%;
