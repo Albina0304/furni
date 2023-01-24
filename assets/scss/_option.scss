@@ -1,12 +1,35 @@
 .option {
+    @include media-down('1260px') {
+        margin: 100px 0;
+    } 
     &-general {
         display: flex;
         margin: 0 -22px;
         align-items: end;
+        @include media-down('980px') {
+            flex-direction: column-reverse;
+            margin: 0;
+            align-items: center;
+        } 
+    }
+    &-title {
+        @include media-down('980px') {
+            text-align: center;
+        } 
+        @include media-down('747px') {
+            font-size: 27px;
+            line-height: 30px;
+        }
     }
     &-right {
         flex: 1 1 40%;
         padding: 0 22px;
+        @include media-down('1260px') {
+            flex: 1 1 50%;
+        } 
+        @include media-down('980px') {
+            padding: 0;
+        } 
     }
     &-left {
         position: relative;
@@ -14,12 +37,35 @@
         flex: 1 1 60%;
         min-height: 514px;
         padding: 0 22px;
+        @include media-down('1260px') {
+            flex: 1 1 50%;
+        } 
+        @include media-down('980px') {
+            padding: 0;
+            flex: 1 1 100%;
+            margin-top: 70px;
+        } 
     }
     &-background {
         position: absolute;
         z-index: -1;
         top: -55px;
         left: -110px;
+        @include media-down('1370px') {
+            left: -50px;
+        } 
+        @include media-down('1260px') {
+            left: -20px;
+        } 
+        @include media-down('420px') {
+            width: 50%;
+            top: -30px;
+            left: -10px;
+        }
+        @include media-down('520px') {
+            top: -30px;
+            left: -10px;
+        }  
     }
     &-wrapper {
         position: relative;
@@ -37,31 +83,89 @@
             z-index: 1;
             bottom: -50px;
             right: 0;
+            @include media-down('1260px') {
+                bottom: -100px;
+            } 
+            @include media-down('1100px') {
+                bottom: -130px;
+            } 
+            @include media-down('980px') {
+                bottom: -60px;
+            } 
+            @include media-down('670px') {
+                bottom: -70px;
+            } 
+            @include media-down('620px') {
+                bottom: -90px;
+            } 
+            @include media-down('590px') {
+                bottom: -110px;
+            } 
+            @include media-down('530px') {
+                bottom: -130px;
+            } 
+            @include media-down('490px') {
+                bottom: -160px;
+            } 
+            @include media-down('440px') {
+                width: 60%;
+                bottom: -100px;
+            } 
         }
         &-secondary {
             padding-left: 33px;
+            @include media-down('670px') {
+                padding-left: 20px;
+            } 
         }
     }
     &-text p {
         margin: 28px 0 31px;
+        @include media-down('980px') {
+            text-align: center;
+        } 
+        @include media-down('747px') {
+            margin: 10px 0 20px;
+        }
     }
     &-colons {
         display: flex;
         flex-wrap: wrap;
+        @include media-down('980px') {
+            margin-bottom: 20px;
+        }
+        @include media-down('590px') {
+            flex-direction: column;
+        } 
     }
     &-col {
         flex: 1 1 50%;
         display: flex;
         align-items: baseline;
+        @include media-down('980px') {
+            justify-content: center;
+        } 
+        @include media-down('747px') {
+            flex: 1 1 25%;
+        }
         &-img {
             display: flex;
             padding-right: 13px;
         }
         &-text p {
             margin: 0 41px 24px 0;
+            @include media-down('980px') {
+                padding: 6px 0;
+                margin: 0;
+            } 
         }
     }
     & .menu-btn {
         margin-top: 14px;
-    }
+        @include media-down('980px') {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+    } 
 }

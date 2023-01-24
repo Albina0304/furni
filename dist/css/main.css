@@ -546,24 +546,68 @@ h5 {
   position: relative;
   z-index: 1; }
 
+@media (max-width: 1260px) {
+  .option {
+    margin: 100px 0; } }
 .option-general {
   display: flex;
   margin: 0 -22px;
   align-items: end; }
+  @media (max-width: 980px) {
+    .option-general {
+      flex-direction: column-reverse;
+      margin: 0;
+      align-items: center; } }
+@media (max-width: 980px) {
+  .option-title {
+    text-align: center; } }
+@media (max-width: 747px) {
+  .option-title {
+    font-size: 27px;
+    line-height: 30px; } }
 .option-right {
   flex: 1 1 40%;
   padding: 0 22px; }
+  @media (max-width: 1260px) {
+    .option-right {
+      flex: 1 1 50%; } }
+  @media (max-width: 980px) {
+    .option-right {
+      padding: 0; } }
 .option-left {
   position: relative;
   z-index: 2;
   flex: 1 1 60%;
   min-height: 514px;
   padding: 0 22px; }
+  @media (max-width: 1260px) {
+    .option-left {
+      flex: 1 1 50%; } }
+  @media (max-width: 980px) {
+    .option-left {
+      padding: 0;
+      flex: 1 1 100%;
+      margin-top: 70px; } }
 .option-background {
   position: absolute;
   z-index: -1;
   top: -55px;
   left: -110px; }
+  @media (max-width: 1370px) {
+    .option-background {
+      left: -50px; } }
+  @media (max-width: 1260px) {
+    .option-background {
+      left: -20px; } }
+  @media (max-width: 420px) {
+    .option-background {
+      width: 50%;
+      top: -30px;
+      left: -10px; } }
+  @media (max-width: 520px) {
+    .option-background {
+      top: -30px;
+      left: -10px; } }
 .option-wrapper {
   position: relative;
   display: flex;
@@ -577,24 +621,82 @@ h5 {
   z-index: 1;
   bottom: -50px;
   right: 0; }
+  @media (max-width: 1260px) {
+    .option-decor-last {
+      bottom: -100px; } }
+  @media (max-width: 1100px) {
+    .option-decor-last {
+      bottom: -130px; } }
+  @media (max-width: 980px) {
+    .option-decor-last {
+      bottom: -60px; } }
+  @media (max-width: 670px) {
+    .option-decor-last {
+      bottom: -70px; } }
+  @media (max-width: 620px) {
+    .option-decor-last {
+      bottom: -90px; } }
+  @media (max-width: 590px) {
+    .option-decor-last {
+      bottom: -110px; } }
+  @media (max-width: 530px) {
+    .option-decor-last {
+      bottom: -130px; } }
+  @media (max-width: 490px) {
+    .option-decor-last {
+      bottom: -160px; } }
+  @media (max-width: 440px) {
+    .option-decor-last {
+      width: 60%;
+      bottom: -100px; } }
 .option-decor-secondary {
   padding-left: 33px; }
+  @media (max-width: 670px) {
+    .option-decor-secondary {
+      padding-left: 20px; } }
 .option-text p {
   margin: 28px 0 31px; }
+  @media (max-width: 980px) {
+    .option-text p {
+      text-align: center; } }
+  @media (max-width: 747px) {
+    .option-text p {
+      margin: 10px 0 20px; } }
 .option-colons {
   display: flex;
   flex-wrap: wrap; }
+  @media (max-width: 980px) {
+    .option-colons {
+      margin-bottom: 20px; } }
+  @media (max-width: 590px) {
+    .option-colons {
+      flex-direction: column; } }
 .option-col {
   flex: 1 1 50%;
   display: flex;
   align-items: baseline; }
+  @media (max-width: 980px) {
+    .option-col {
+      justify-content: center; } }
+  @media (max-width: 747px) {
+    .option-col {
+      flex: 1 1 25%; } }
   .option-col-img {
     display: flex;
     padding-right: 13px; }
   .option-col-text p {
     margin: 0 41px 24px 0; }
+    @media (max-width: 980px) {
+      .option-col-text p {
+        padding: 6px 0;
+        margin: 0; } }
 .option .menu-btn {
   margin-top: 14px; }
+  @media (max-width: 980px) {
+    .option .menu-btn {
+      margin: 0;
+      display: flex;
+      justify-content: center; } }
 
 .product {
   background-color: #EFF2F1;
