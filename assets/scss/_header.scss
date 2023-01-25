@@ -1,6 +1,5 @@
 .header {
     background-color: $secondary-color;
-
     &-navigation {
         @include reset-list;
         display: flex;
@@ -53,7 +52,7 @@
     &-nav {
         display: flex;
         justify-content: space-between;
-        padding: 50px 0 132px;
+        padding: 50px 0;
         @include media-down('980px') {
             padding-bottom: 60px;
         }

@@ -1,7 +1,4 @@
 .info {
-    @include media-down('1100px') {
-        margin: 150px 0;
-    }
     h5 {
         @include media-down('860px') {
             text-align: start;

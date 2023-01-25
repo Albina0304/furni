@@ -9,6 +9,7 @@
 
     &-left {
         width: 40%;
+        padding: 50px 0;
         @include media-down('980px') {
             width: 100%;
             text-align: center;
@@ -21,9 +22,6 @@
         }  
         @include media-down('980px') {
             padding-bottom: 40px;
-        }
-        @include media-down('590px') {
-            padding-bottom: 20px;
         }
         @include media-down('590px') {
             padding: 0;
@@ -65,12 +63,16 @@
     &-background {
         position: absolute;
         z-index: 1;
-        @include media-down('590px') {
-            right: -80px;
-            top: -10px;
+        top: 60px;
+        @include media-down('980px') {
+            top: 0px;
         }
-        @include media-down('500px') {
-            top: -30px;
+        @include media-down('590px') {
+            right: -90px;
+            top: 0px;
+        }
+        @include media-down('420px') {
+            top: -40px;
         }
         img {
             @include media-down('590px') {
@@ -81,8 +83,9 @@
     & &-sofa {
         position: relative;
         z-index: 2;
-        top: -72px;
-        right: -6px;
+        @include media-down('980px') {
+            top: -60px;
+        }
     }
     .section {
         &-button-wrapper {

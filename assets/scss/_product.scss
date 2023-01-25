@@ -1,25 +1,24 @@
 .product {
     background-color: $background;
-    margin-bottom: 95px;
+    margin: 130px 0 95px;
     @include media-down('780px') {
         margin-bottom: 45px;
     }
     &-cards {
         display: flex;
         margin: 0 -24px;
-        @include media-down('820px') {
-            margin: 0;
+        @include media-down('920px') {
+            margin: 0 -12px;
         } 
         @include media-down('780px') {
             flex-direction: column;
-            margin-top: 130px;
         }
     }
     &-card {
         width: 33.3%;
         padding: 0 24px;
         display: flex;
-        @include media-down('820px') {
+        @include media-down('920px') {
             padding: 0 12px;
         } 
         @include media-down('780px') {
@@ -34,32 +33,27 @@
                 height: 63px;
             } 
         }
+        &-center {
+            margin-bottom: 0;
+            .product-img {
+                @include media-down('780px') {
+                    margin: 0px 23px 40px -10px;
+                } 
+            }
+            & .product-info {
+                @include media-down('780px') {
+                    margin-top: -40px;
+                }
+            }
+        }
     }
     &-img {
-        margin-right: 18px;
+        margin-right: 33px;
         position: relative;
         z-index: 1;
-        @include media-down('980px') {
-            padding: 10px;
-        } 
-        @include media-down('820px') {
-            width: 50%;
-        } 
-        @include media-down('780px') {
-            width: 10%;
-        }
-        @include media-down('620px') {
-            width: 13%;
-        } 
-        @include media-down('520px') {
-            width: 16%;
-        } 
-        @include media-down('450px') {
-            width: 21%;
-        } 
-        @include media-down('390px') {
-            width: 28%;
-        } 
+        align-self: flex-start;
+        min-width: 20%;
+        margin-top: -10px;
         &:after {
             content: '';
             border-radius: 10px;
@@ -68,8 +62,16 @@
             display: block;
             background-color: rgba($secondary-color, 0.3);
             position: absolute;
-            top: 0;
-            right: -5px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        & img {
+            @include media-down('780px') {
+                max-width: 70%;
+                margin: auto;
+            } 
         }
     }
     &-text {
