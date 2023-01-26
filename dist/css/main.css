@@ -794,16 +794,40 @@ h5 {
   margin-bottom: 41px;
   position: relative;
   z-index: 2; }
+  @media (max-width: 760px) {
+    .testimonials-slider-person-text {
+      font-size: 12px; } }
   .testimonials-slider-title {
     text-align: center; }
   .testimonials-slider-title {
     margin-bottom: 47px; }
+    @media (max-width: 860px) {
+      .testimonials-slider-title {
+        margin-bottom: 20px;
+        font-size: 30px; } }
   .testimonials-slider-text p {
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;
     margin-bottom: 42px;
     padding: 0 180px; }
+    @media (max-width: 1100px) {
+      .testimonials-slider-text p {
+        padding: 0 90px; } }
+    @media (max-width: 860px) {
+      .testimonials-slider-text p {
+        margin-bottom: 20px; } }
+    @media (max-width: 760px) {
+      .testimonials-slider-text p {
+        font-size: 14px;
+        line-height: 24px; } }
+    @media (max-width: 620px) {
+      .testimonials-slider-text p {
+        font-size: 13px;
+        line-height: 22px; } }
+    @media (max-width: 540px) {
+      .testimonials-slider-text p {
+        padding: 0; } }
   .testimonials-slider-img, .testimonials-slider-person-title {
     margin-bottom: 4px; }
   .testimonials-slider-img {
@@ -818,6 +842,9 @@ h5 {
       display: flex;
       justify-content: center;
       margin-top: 40px; }
+      @media (max-width: 1100px) {
+        .testimonials-slider .slids .slick-dots {
+          margin-top: 20px; } }
       .testimonials-slider .slids .slick-dots button {
         background-color: #D9D9D9;
         order: 1;
@@ -843,6 +870,12 @@ h5 {
       height: 58px;
       overflow: hidden;
       transition: all 1s; }
+      @media (max-width: 540px) {
+        .testimonials-slider .slids .slick-prev, .testimonials-slider .slids .slick-next {
+          background: none; } }
+      @media (max-width: 540px) {
+        .testimonials-slider .slids .slick-prev svg, .testimonials-slider .slids .slick-next svg {
+          display: none; } }
       .testimonials-slider .slids .slick-prev:hover, .testimonials-slider .slids .slick-next:hover {
         background-color: #385D50; }
         .testimonials-slider .slids .slick-prev:hover svg path, .testimonials-slider .slids .slick-next:hover svg path {
@@ -850,7 +883,8 @@ h5 {
     .testimonials-slider .slids .slick-prev {
       left: 0; }
     .testimonials-slider .slids .slick-next {
-      right: 0; }
+      right: 0;
+      display: none; }
 
 .blog {
   background-color: #EFF2F1;
