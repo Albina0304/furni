@@ -1,12 +1,24 @@
-.form {
+.subscribe-form {
     background-color: $white;
-    position: relative;
-    z-index: 2;
     padding: 97px 0 138px;
+    @include media-down('980px') {
+        padding: 80px 0;
+    }
+    @include media-down('680px') {
+        padding: 30px 0 60px;
+    }
+    &-fill,
+    &-record {
+        @include media-down('720px') {
+            flex-direction: column;
+        }
+    }
     &-fill,
     &-description,
     &-record {
         display: flex;
+        position: relative;
+        z-index: 2;
     }
     &-record {
         p {
@@ -17,12 +29,43 @@
             border: 1px solid $border;
             border-radius: 10px;
             margin-right: 15px;
+            @include media-down('870px') {
+                padding: 10px 0 10px 6px;
+                margin-right: 10px;
+            }
+            @include media-down('720px') {
+                margin: 0 0 10px;
+            }
+            @include media-down('580px') {
+                max-width: 100%;
+                font-size: 12px;
+            }
         }
     }
     &-left {
         flex: 1 1 60%;
+        @include media-down('720px') {
+            flex: 1 1 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        &-title {
+            @include media-down('870px') {
+                font-size: 16px;
+            }
+            @include media-down('680px') {
+                font-size: 14px;
+            }
+            @include media-down('480px') {
+                font-size: 12px;
+            }
+        }
         &-img {
             margin-right: 12px;
+            @include media-down('480px') {
+                max-width: 18px;
+                margin-right: 5px;
+            }
             &-title {
                 font-weight: 600;
             }
@@ -30,22 +73,63 @@
     }
     &-right {
         flex: 1 1 40%;
+        @include media-down('720px') {
+            flex: none
+        }
         &-img {
             position: absolute;
             z-index: 1;
-            bottom: 0;
+            bottom: -120px;
+            @include media-down('870px') {
+                bottom: -40px;
+            }
+            @include media-down('720px') {
+                display: flex;
+                max-width: 50%;
+                right: 10px;
+                bottom: 0;
+            }
+            @include media-down('580px') {
+                bottom: 30px;
+            }
+            @include media-down('480px') {
+                max-width: 60%;
+                bottom: 20px;
+                right: -20px;
+            }
         }
     }
     &-description {
         display: flex;
-        align-items: center;
         margin-bottom: 24px;
+        @include media-down('720px') {
+            margin-bottom: 14px;
+        }
     }
     &-control {
         background-color: $secondary-color;
         border: 1px solid $border;
         border-radius: 10px;
         padding: 4px 6px;
+        @media (max-width: 870px) and (min-width: 721px) {
+            padding: 6px 6px 0px 6px;
+        }
+        @include media-down('720px') {
+            max-width: 5%;
+            padding: 8px 30px 4px 8px;
+            margin-top: 10px;
+        }
+        @include media-down('580px') {
+            max-width: 33px;
+            padding: 4px;
+            margin: 0;
+        }
+        & svg {
+            @include media-down('870px') {
+                width: 20px;
+                height: 20px;
+            }
+        }
         &:hover {
             background-color: $background-hover;
             & svg path {

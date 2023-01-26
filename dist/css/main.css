@@ -993,44 +993,121 @@ h5 {
         font-size: 13px;
         line-height: 12px; } }
 
-.form {
+.subscribe-form {
   background-color: #FFFF;
-  position: relative;
-  z-index: 2;
   padding: 97px 0 138px; }
-  .form-fill, .form-description, .form-record {
-    display: flex; }
-  .form-record p {
+  @media (max-width: 980px) {
+    .subscribe-form {
+      padding: 80px 0; } }
+  @media (max-width: 680px) {
+    .subscribe-form {
+      padding: 30px 0 60px; } }
+  @media (max-width: 720px) {
+    .subscribe-form-fill, .subscribe-form-record {
+      flex-direction: column; } }
+  .subscribe-form-fill, .subscribe-form-description, .subscribe-form-record {
+    display: flex;
+    position: relative;
+    z-index: 2; }
+  .subscribe-form-record p {
     line-height: 24px; }
-  .form-record input {
+  .subscribe-form-record input {
     padding: 12px 0 12px 22px;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     margin-right: 15px; }
-  .form-left {
+    @media (max-width: 870px) {
+      .subscribe-form-record input {
+        padding: 10px 0 10px 6px;
+        margin-right: 10px; } }
+    @media (max-width: 720px) {
+      .subscribe-form-record input {
+        margin: 0 0 10px; } }
+    @media (max-width: 580px) {
+      .subscribe-form-record input {
+        max-width: 100%;
+        font-size: 12px; } }
+  .subscribe-form-left {
     flex: 1 1 60%; }
-    .form-left-img {
+    @media (max-width: 720px) {
+      .subscribe-form-left {
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: column; } }
+    @media (max-width: 870px) {
+      .subscribe-form-left-title {
+        font-size: 16px; } }
+    @media (max-width: 680px) {
+      .subscribe-form-left-title {
+        font-size: 14px; } }
+    @media (max-width: 480px) {
+      .subscribe-form-left-title {
+        font-size: 12px; } }
+    .subscribe-form-left-img {
       margin-right: 12px; }
-      .form-left-img-title {
+      @media (max-width: 480px) {
+        .subscribe-form-left-img {
+          max-width: 18px;
+          margin-right: 5px; } }
+      .subscribe-form-left-img-title {
         font-weight: 600; }
-  .form-right {
+  .subscribe-form-right {
     flex: 1 1 40%; }
-    .form-right-img {
+    @media (max-width: 720px) {
+      .subscribe-form-right {
+        flex: none; } }
+    .subscribe-form-right-img {
       position: absolute;
       z-index: 1;
-      bottom: 0; }
-  .form-description {
+      bottom: -120px; }
+      @media (max-width: 870px) {
+        .subscribe-form-right-img {
+          bottom: -40px; } }
+      @media (max-width: 720px) {
+        .subscribe-form-right-img {
+          display: flex;
+          max-width: 50%;
+          right: 10px;
+          bottom: 0; } }
+      @media (max-width: 580px) {
+        .subscribe-form-right-img {
+          bottom: 30px; } }
+      @media (max-width: 480px) {
+        .subscribe-form-right-img {
+          max-width: 60%;
+          bottom: 20px;
+          right: -20px; } }
+  .subscribe-form-description {
     display: flex;
-    align-items: center;
     margin-bottom: 24px; }
-  .form-control {
+    @media (max-width: 720px) {
+      .subscribe-form-description {
+        margin-bottom: 14px; } }
+  .subscribe-form-control {
     background-color: #385D50;
     border: 1px solid #C4C4C4;
     border-radius: 10px;
     padding: 4px 6px; }
-    .form-control:hover {
+    @media (max-width: 870px) and (min-width: 721px) {
+      .subscribe-form-control {
+        padding: 6px 6px 0px 6px; } }
+    @media (max-width: 720px) {
+      .subscribe-form-control {
+        max-width: 5%;
+        padding: 8px 30px 4px 8px;
+        margin-top: 10px; } }
+    @media (max-width: 580px) {
+      .subscribe-form-control {
+        max-width: 33px;
+        padding: 4px;
+        margin: 0; } }
+    @media (max-width: 870px) {
+      .subscribe-form-control svg {
+        width: 20px;
+        height: 20px; } }
+    .subscribe-form-control:hover {
       background-color: #E9E9E9; }
-      .form-control:hover svg path {
+      .subscribe-form-control:hover svg path {
         fill: #385D50; }
 
 .btn {
