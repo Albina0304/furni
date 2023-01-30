@@ -14,6 +14,11 @@
         display: flex;
         justify-content: center;
         margin: 0 11px 32px 0;
+        @include media-down('590px') {
+            margin: 0 7px 0 0;
+            height: 31px;
+            width: 31px;
+        } 
         &:hover {
             background-color: $secondary-color;
             & svg path {
@@ -35,37 +40,103 @@
     &-top {
         display: flex;
         align-items: start;
+        margin-bottom: 20px;
+        @include media-down('680px') {
+            flex-direction: column;
+        }
+        @include media-down('591px') {
+            display: none;
+        }
         &-navigation {
             display: flex;
             flex: 1 1 68%;
             justify-content: space-around;
             padding: 0px 65px;
+            @include media-down('780px') {
+                padding: 0 10px;
+            }
+            @include media-down('680px') {
+                width: 100%;
+                padding: 0;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+            @include media-down('420px') {
+                flex-direction: column;
+            }
         }
         &-company {
             flex: 1 1 32%;
+            @media (max-width: 780px) and (min-width: 681px) {
+                flex: 1 1 50%;
+            }
+            p {
+                @media (max-width: 890px) and (min-width: 681px) {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                @include media-down('680px') {
+                    margin-bottom: 20px;
+                }
+                @include media-down('460px') {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
         }
         &-nav {
             @include reset-list;
+            @include media-down('420px') {
+                margin-bottom: 20px;
+            }
             a {
                 color: $body;
                 line-height: 28px;
+                @media (max-width: 890px) and (min-width: 681px) {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                @include media-down('460px') {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                @include media-down('420px') {
+                    font-size: 14px;
+                    line-height: 28px;
+                }
                 &:hover {
                     color: $primary-color;
                 }
             }
         }
     }
+    &-colon {
+        display: none;
+        @include media-down('590px') {
+            display: block;
+        } 
+    }
     &-bottom {
         padding: 36px 0 93px;
         display: flex;
         justify-content: space-between;
+        @include media-down('590px') {
+            display: block;
+        } 
         &-copy {
+            @include media-down('590px') {
+                font-size: 11px;
+                margin-bottom: 10px;
+            } 
             span {
                 font-size: 13px;
             }
         }
         a {
             color: $body;
+            @include media-down('720px') {
+                font-size: 11px;
+            } 
             &:hover {
                 color: $primary-color;
             }
@@ -73,10 +144,34 @@
         &-help {
             display: flex;
             margin: 0 -21px;
+            @include media-down('720px') {
+                margin: 0 -10px;
+            } 
             &-link {
                 padding: 0 21px;
+                @include media-down('720px') {
+                    padding: 0 10px;
+                } 
             }
         }
     }
+    .accordion {
+        display: none;
+        @include media-down('590px') {
+            display: block;
+            margin: 20px 0;
+        } 
+        &-button {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        &-body {
+            padding: 20px 0 20px;
+        }
+    }
+    &-text {
+        @include media-down('590px') {
+            margin-bottom: 20px;
+        } 
+    }
 }
-

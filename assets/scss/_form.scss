@@ -7,10 +7,23 @@
     @include media-down('680px') {
         padding: 30px 0 60px;
     }
-    &-fill,
-    &-record {
+    &-fill {
         @include media-down('720px') {
-            flex-direction: column;
+            flex-direction: column-reverse;
+            display: flex;
+        }
+        @include media-down('590px') {
+            display: flex;
+        }
+    }
+    &-record {
+        @include media-down('590px') {
+            display: block;
+        }
+        .form {
+            @include media-down('720px') {
+                align-items: center;
+            } 
         }
     }
     &-fill,
@@ -19,8 +32,24 @@
         display: flex;
         position: relative;
         z-index: 2;
+        @media (max-width: 720px) and (min-width: 590px) {
+            justify-content: center;
+            align-items: center;
+        }
+        @include media-down('590px') {
+            flex-direction: column-reverse;
+        }
     }
     &-record {
+        & form {
+            display: flex;
+            @media (max-width: 720px) and (min-width: 590px) {
+                align-items: center;
+            }
+            @include media-down('590px') {
+                display: block;
+            }
+        }
         p {
             line-height: 24px;
         }
@@ -29,26 +58,16 @@
             border: 1px solid $border;
             border-radius: 10px;
             margin-right: 15px;
-            @include media-down('870px') {
-                padding: 10px 0 10px 6px;
-                margin-right: 10px;
-            }
-            @include media-down('720px') {
-                margin: 0 0 10px;
-            }
-            @include media-down('580px') {
-                max-width: 100%;
-                font-size: 12px;
+            @include media-down('590px') {
+                margin: 0 0 10px 0;
+                text-align: center;
+                padding: 10px 0;
+                width: 100%;
             }
         }
     }
     &-left {
         flex: 1 1 60%;
-        @include media-down('720px') {
-            flex: 1 1 100%;
-            display: flex;
-            flex-direction: column;
-        }
         &-title {
             @include media-down('870px') {
                 font-size: 16px;
@@ -56,8 +75,8 @@
             @include media-down('680px') {
                 font-size: 14px;
             }
-            @include media-down('480px') {
-                font-size: 12px;
+            @include media-down('520px') {
+                font-size: 13px;
             }
         }
         &-img {
@@ -73,9 +92,6 @@
     }
     &-right {
         flex: 1 1 40%;
-        @include media-down('720px') {
-            flex: none
-        }
         &-img {
             position: absolute;
             z-index: 1;
@@ -84,18 +100,15 @@
                 bottom: -40px;
             }
             @include media-down('720px') {
-                display: flex;
-                max-width: 50%;
-                right: 10px;
-                bottom: 0;
-            }
-            @include media-down('580px') {
-                bottom: 30px;
-            }
-            @include media-down('480px') {
+                position: static;
                 max-width: 60%;
-                bottom: 20px;
-                right: -20px;
+                margin: -140px auto 0;
+            }
+            @include media-down('620px') {
+                margin: -80px auto 0;
+            }
+            @include media-down('420px') {
+                max-width: 70%;
             }
         }
     }
@@ -103,37 +116,39 @@
         display: flex;
         margin-bottom: 24px;
         @include media-down('720px') {
-            margin-bottom: 14px;
+            align-items: center;
+            justify-content: center;
+        }
+        @include media-down('590px') {
+            margin-top: 20px;
+            flex-direction: inherit;
         }
     }
     &-control {
-        background-color: $secondary-color;
-        border: 1px solid $border;
-        border-radius: 10px;
-        padding: 4px 6px;
-        @media (max-width: 870px) and (min-width: 721px) {
-            padding: 6px 6px 0px 6px;
-        }
-        @include media-down('720px') {
-            max-width: 5%;
-            padding: 8px 30px 4px 8px;
-            margin-top: 10px;
-        }
-        @include media-down('580px') {
-            max-width: 33px;
-            padding: 4px;
-            margin: 0;
-        }
-        & svg {
-            @include media-down('870px') {
-                width: 20px;
-                height: 20px;
+        width: 100%;
+        & button {
+            background-color: $secondary-color;
+            border: 1px solid $border;
+            border-radius: 10px;
+            padding: 4px 6px;
+            cursor: pointer;
+            @include media-down('590px') {
+                width: 100%;
+            }
+            &:hover {
+                background-color: $background-hover;
+                border-radius: 10px;
+                overflow: hidden;
+                & svg path {
+                    fill: $secondary-color;
+                }
             }
         }
-        &:hover {
-            background-color: $background-hover;
-            & svg path {
-                fill: $secondary-color;
+        & svg {
+            &:hover {
+                & svg path {
+                    fill: $secondary-color;
+                }
             }
         }
     }
