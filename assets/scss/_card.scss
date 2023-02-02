@@ -1,6 +1,7 @@
 .card {
     background-color: $background;
     margin-top: 164px;
+    border: none;
     @include media-down('1000px') {
         margin-top: 90px;
     }

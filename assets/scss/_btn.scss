@@ -1,5 +1,5 @@
 .btn {
-	border: 2px solid rgba(255, 255, 255, 0.29);
+	border: 2px solid $border-btn;
     border-radius: 30px;
     padding: 11px 37px;
 	background-color: transparent;
@@ -30,5 +30,8 @@
 		background-color: $text;
 		border-radius: 30px;
 		padding: 11px 32px;
+	}
+	&-primary {
+		--bs-btn-hover-border-color: rgba(255, 255, 255, 0.29);
 	}
 }
